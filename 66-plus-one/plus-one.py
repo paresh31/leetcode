@@ -3,9 +3,9 @@ class Solution:
         c = ""
         for i in range(len(digits)):
             c += str(digits[i])
-        a = str(int(c)+1)
-        b = list(a)
-        l = []
-        for item in b:
-            l.append(int(item))
+        a = int(c)+1
+        b = str(a)
+        l = list()
+        for i in range(len(b)):
+            l.append(int(b[i]))
         return l
