@@ -2,10 +2,12 @@ class Solution:
     def minBitFlips(self, start: int, goal: int) -> int:
         less = min(start, goal)
         more = max(start, goal)
+        bs = bin(start)[2:]
+        bg = bin(goal)[2:]
+        ma = max(len(bs), len(bg))
+        mi = min(len(bs), len(bg))
         bm = bin(more)[2:]
         bl = bin(less)[2:]
-        ma = max(len(bm), len(bl))
-        mi = min(len(bm), len(bl))
         rl = bl[::-1]
         for i in range(ma-mi):
             rl += "0"
