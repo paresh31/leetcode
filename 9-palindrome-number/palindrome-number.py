@@ -13,6 +13,5 @@ class Solution:
 
         if x < 0:
             return False
-        s = str(x)
-        s = int(s[::-1])
+        s = int(str(x)[::-1])
         return s == x
