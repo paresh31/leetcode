@@ -3,10 +3,7 @@ class Solution:
         vowels = ['a', 'e', 'i', 'o', 'u']
         valid = list()
         for word in words:
-            if word[0] in vowels and word[-1] in vowels:
-                valid.append(1)
-            else:
-                valid.append(0)
+            valid.append(1 if word[0] in vowels and word[-1] in vowels else 0)
         prefix = [0]
         for count in valid:
             prefix.append(prefix[-1] + count)
