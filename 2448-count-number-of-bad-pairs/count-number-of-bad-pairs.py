@@ -17,9 +17,5 @@ class Solution:
                 freq[diff] += 1
             else:
                 freq[diff] = 1
-
         return tot - c
         
-        
-        
-           
