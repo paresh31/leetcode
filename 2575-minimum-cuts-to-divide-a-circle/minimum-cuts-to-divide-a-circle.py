@@ -4,6 +4,4 @@ class Solution:
             return 0
         elif n % 2 == 0:
             return n // 2
-        elif n % 3 == 0 and n % 6 != 0:
-            return n
         return n
