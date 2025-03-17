@@ -3,12 +3,8 @@ class Solution:
         n = len(nums)
         if n % 2 != 0:
             return False
-        d = {}
-        for item in nums:
-            if item in d:
-                d[item] += 1
-            else:
-                d[item] = 1
+        from collections import Counter
+        d = dict(Counter(nums))
         for v in d.values():
             if v % 2 != 0:
                 return False
