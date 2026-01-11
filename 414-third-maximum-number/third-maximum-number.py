@@ -1,8 +1,14 @@
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        li = sorted(set(nums))
-        if len(li) == 2:
-            return li[-1]
-        if len(li) == 1:
-            return li[0]
-        return li[-3]
+        m1 = m2 = m3 = float('-inf')
+        for n in nums:
+            if n > m1:
+                m3 = m2
+                m2 = m1
+                m1 = n
+            elif n > m2 and n < m1:
+                m3 = m2
+                m2 = n
+            elif n > m3 and n < m2:
+                m3 = n
+        return m3 if m3 != float('-inf') else m1
